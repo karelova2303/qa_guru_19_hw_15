@@ -40,8 +40,9 @@ def setup_browser(request):
 desktop_only = pytest.mark.parametrize('setup_browser', ['desktop'], indirect=True)
 mobile_only = pytest.mark.parametrize('setup_browser', ['mobile'], indirect=True)
 
+screen_size = [(400, 634), (360, 740), (1920, 1080), (1366, 768)]
 
-@pytest.fixture(params=[(400, 634), (360, 740), (1920, 1080), (1366, 768)])
+@pytest.fixture(params=screen_size)
 def open_browser(request):
     width, height = request.param
     browser.config.window_width = width
