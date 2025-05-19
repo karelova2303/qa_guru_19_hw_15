@@ -3,10 +3,10 @@
 """
 import pytest
 
-from github_click_button.pages.page_button import PageButton
+from github.pages.github_page import GithubPage
 from tests.conftest import desktop_only, mobile_only
 
-page_button = PageButton()
+page_button = GithubPage()
 
 @desktop_only
 def test_github_desktop(setup_browser):

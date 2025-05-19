@@ -1,7 +1,7 @@
 from selene import browser, have
 
 
-class PageButton():
+class GithubPage():
     def __init__(self):
         self.button_sign_up = browser.element('.HeaderMenu-link--sign-up')
         self.button_content = browser.element('.Button-content')

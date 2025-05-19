@@ -4,9 +4,9 @@
 """
 import pytest
 
-from github_click_button.pages.page_button import PageButton
+from github.pages.github_page import GithubPage
 
-page_button = PageButton()
+page_button = GithubPage()
 
 
 def test_github_desktop(open_browser):
